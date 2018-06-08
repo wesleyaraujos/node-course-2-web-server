@@ -48,6 +48,13 @@ app.get('/about', (req, res)=>{
     });
 });
 
+app.get('/projects', (req, res)=>{
+    res.render('projects.hbs',{
+        pageTitle: 'Projects Page',
+        projectsMessage: 'Project 1: Build this application'
+    });
+});
+
 app.get('/bad', (req, res)=>{
     res.send({
         errorMessage: "Ooops.. something went wrong!"
